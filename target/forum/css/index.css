@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e1f5f5
+}
+
+.layui-breadcrumb a {
+    font-size: 18px;
+}
+
+
+#topNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#searchInput {
+    width: 300px;
+    display: inline;
+}
+
+.category {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.category div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.categoryWrap a {
+    flex: 1;
+    width: 15%;
+    min-width: 15%;
+    max-width: 15%;
+    height: 30px;
+}
+
+#slideshow {
+    margin-top: 20px;
+    position: relative;
+    margin: auto;
+}
+
+body #loginBody {
+    display: none;
+}
+
+#topic > div {
+    padding: 10px 5px 10px 0;
+    margin: 30px auto !important;
+    width: 80%;
+    /*background-color: rgb(248, 248, 248);*/
+    cursor: pointer;
+}
+
+#userBox {
+    height: 80%;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex
+}
+
+
+.detailTop {
+    width: 1400px;
+    height: 80px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+}
+
+.detailTop > * {
+    margin-left: 60px;
+}
+
+.detailBot > li {
+    padding: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.detailBot > li > div {
+    width: 200px;
+    text-align: center;
+}
+
+.comment {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.categoryWrap {
+    padding: 20px 0
+}
+
+.commentItem {
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 2px solid #cfc8c8
+}
+
+.cItemLeft {
+    height: 60px
+}
+
+.cItemRight {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 20px
+}
+
+.cItemRight > * {
+    width: 100%;
+    margin-top: 10px;
+}

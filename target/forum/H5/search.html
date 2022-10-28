@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer"/>
+    <title>搜索页面</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../js/layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/wangEditor.css">
+    <script src="../js/layui-v2.6.8/layui/layui.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/wangEditor5.js"></script>
+    <script src="../js/search.js"></script>
+</head>
+<body>
+<div class="nav">
+    <ul class="layui-nav layui-bg-green" id="topNav">
+
+
+        <!--        论坛-->
+        <li class="layui-nav-item">
+            <a href="./index.html" id="index">论坛首页</a>
+        </li>
+
+
+        <!--        搜索框-->
+        <li class="layui-nav-item">
+            <input type="text" placeholder="请输入想要搜索的内容" class="layui-input" id="searchInput">
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-normal" id="searchBtn"><i
+                    class="layui-icon layui-icon-search"></i>搜索
+            </button>
+        </li>
+
+
+        <!--        用户信息-->
+        <li class="layui-nav-item" id="user">
+            <a href="" id="userHref"><img src="" class="layui-nav-img" id="userHeadImg"><span
+                    id="userName">请登录</span></a>
+            <dl class="layui-nav-child" id="userDo">
+                <!--                <dd><a href="javascript:;" id="login">登录</a></dd>-->
+                <!--                <dd><a href="javascript:;" id="register">注册</a></dd>-->
+            </dl>
+        </li>
+
+    </ul>
+</div>
+
+
+<!-- 分类 -->
+<div class="category" id="category">
+    <div class="layui-breadcrumb categoryWrap" lay-separator="|" id="categorySon">
+        <!--        <a href="">黑客和画家</a>-->
+        <!--        <a href="">前端生活</a>-->
+        <!--        <a href="">人工智能</a>-->
+        <!--        <a href="">自动化测试</a>-->
+        <!--        <a href="">大数据</a>-->
+        <!--        <a href="">Java进阶</a>-->
+        <!--        <a href="">网络安全</a>-->
+        <!--        <a href="">后端架构</a>-->
+    </div>
+</div>
+
+
+<!-- 话题内容 -->
+<div id="topic">
+    <!--<div class="topicItem" topicId=1>-->
+    <!--        <p>-->
+    <!--            title-->
+    <!--        </p>-->
+    <!--        <p>-->
+    <!--            content-->
+    <!--        </p>-->
+    <!--        <p>-->
+    <!--            浏览量：29-->
+    <!--        </p>-->
+    <!--    </div>d="topic"> -->
+</div>
+<div class="pageBox" style="text-align: center;">
+    <div id="pageElement"></div>
+</div>
+
+<div id="changeBody" style="padding: 20px 20px 0 0;display: none">
+    <form class="layui-form" action="" id="changeForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">名字</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入名字"
+                       autocomplete="off"
+                       class="layui-input" id="changeName">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">手机号</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入手机号"
+                       autocomplete="off"
+                       class="layui-input" id="changePhone">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+                <input type="password" name="title" required lay-verify="required" placeholder="请输入密码"
+                       autocomplete="off"
+                       class="layui-input" id="changePwd">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block" class="sexBox" id="changeSexBox">
+                <input type="radio" class="male" name="sex" value="男" title="男">
+                <input type="radio" class="female" name="sex" value="女" title="女">
+            </div>
+        </div>
+    </form>
+</div>
+<div id="registerBody" style="padding: 20px 20px 0 0;display: none">
+    <form class="layui-form" action="" id="registerForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">名字</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入名字"
+                       autocomplete="off"
+                       class="layui-input" id="registerName">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">手机号</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入手机号"
+                       autocomplete="off"
+                       class="layui-input" id="registerPhone">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+                <input type="password" name="title" required lay-verify="required" placeholder="请输入密码"
+                       autocomplete="off"
+                       class="layui-input" id="registerPwd">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block" id="sexBox">
+                <input type="radio" id="male" name="sex" value="男" title="男" checked>
+                <input type="radio" id="female" name="sex" value="女" title="女">
+            </div>
+        </div>
+    </form>
+</div>
+<div id="loginBody" style="padding: 20px 20px 0 0;display: none">
+    <form class="layui-form" action="" id="loginForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">手机号</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入手机号" autocomplete="off"
+                       class="layui-input" id="phoneInput">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+                <input type="password" name="title" required lay-verify="required" placeholder="请输入密码"
+                       autocomplete="off"
+                       class="layui-input" id="pwdInput">
+            </div>
+        </div>
+    </form>
+</div>
+<div id="publishBody" style="display: none;padding: 20px 20px 0 0;">
+    <form class="layui-form" action="" id="publishForm">
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类</label>
+            <div class="layui-input-block">
+                <select name="category" lay-verify="required" id="categorySelect">
+                    <!--                    <option value="0">北京</option>-->
+                    <!--                    <option value="1">上海</option>-->
+                    <!--                    <option value="2">广州</option>-->
+                    <!--                    <option value="3">深圳</option>-->
+                    <!--                    <option value="4">杭州</option>-->
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">标题</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+                       class="layui-input" id="titleInput">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">内容</label>
+            <div class="layui-input-block">
+                <div id="toolbar-container" style="z-index: 101"></div>
+                <div id="editor-container" style="height: 450px !important;z-index: 100"></div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>话题</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../js/layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/wangEditor.css">
+    <script src="../js/layui-v2.6.8/layui/layui.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/wangEditor5.js"></script>
+    <script src="../js/topic.js"></script>
+</head>
+<body>
+<div class="nav">
+    <ul class="layui-nav layui-bg-green" id="topNav">
+
+
+        <!--        论坛-->
+        <li class="layui-nav-item">
+            <a href="./index.html" id="index">论坛首页</a>
+        </li>
+
+
+        <!--        搜索框-->
+        <li class="layui-nav-item">
+            <input type="text" placeholder="请输入想要搜索的内容" class="layui-input" id="searchInput">
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-normal" id="searchBtn"><i
+                    class="layui-icon layui-icon-search"></i>搜索
+            </button>
+        </li>
+
+
+        <!--        用户信息-->
+        <li class="layui-nav-item" id="user">
+            <a href="" id="userHref"><img src="" class="layui-nav-img userHeadImg"><span
+                    class="userName">请登录</span></a>
+            <dl class="layui-nav-child" id="userDo">
+                <!--                <dd><a href="javascript:;" id="login">登录</a></dd>-->
+                <!--                <dd><a href="javascript:;" id="register">注册</a></dd>-->
+            </dl>
+        </li>
+
+    </ul>
+</div>
+
+
+<!-- 分类 -->
+<div class="category" id="category">
+    <div class="layui-breadcrumb categoryWrap" lay-separator="|" id="categorySon">
+        <!--        <a href="">黑客和画家</a>-->
+        <!--        <a href="">前端生活</a>-->
+        <!--        <a href="">人工智能</a>-->
+        <!--        <a href="">自动化测试</a>-->
+        <!--        <a href="">大数据</a>-->
+        <!--        <a href="">Java进阶</a>-->
+        <!--        <a href="">网络安全</a>-->
+        <!--        <a href="">后端架构</a>-->
+    </div>
+</div>
+
+<!-- 话题内容 -->
+<div id="topic">
+    <!--<div class="topicItem" topicId=1>-->
+    <!--        <p>-->
+    <!--            title-->
+    <!--        </p>-->
+    <!--        <p>-->
+    <!--            content-->
+    <!--        </p>-->
+    <!--        <p>-->
+    <!--            浏览量：29-->
+    <!--        </p>-->
+    <!--    </div>d="topic"> -->
+</div>
+<div class="comment">
+    <h1>评论</h1>
+    <div class="commentWrap">
+        <!--        <div class="commentItem">-->
+        <!--            <div class="cItemLeft">-->
+        <!--                <img src="" class="layui-nav-img userHeadImg" style="height: 100%;width: auto;">-->
+        <!--            </div>-->
+        <!--            <div class="cItemRight">-->
+        <!--                <p style="font-size: 18px;margin-top: 0"><span class="userName"></span> <span class="commentTime">2020-1-10</span>-->
+        <!--                </p>-->
+        <!--                <div class="commentText">-->
+        <!--                    讲得好！以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我。以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我。以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我。以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我。以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我。以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我。以前是传统IT公司，想转行互联网公司怎么办？谁可以告诉我-->
+        <!--                </div>-->
+        <!--                <div style="display: flex;justify-content: flex-end;align-items: baseline">-->
+        <!--                    <button type="button" class="layui-btn layui-btn-radius comBtn">回复</button>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+</div>
+<div class="pageBox" style="text-align: center;">
+    <div id="pageElement"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajaxTest</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<button id="test">测试</button>
+<h3 id="resultTest"></h3>
+<script>
+    //加载页面时直接调用函数  或者给body加onload函数  或者使用$().ready(function(){})
+    $(function () {
+        $.ajax({
+            url: "../topic",
+            type: "post",
+            data: {
+                method: "getTopicList",
+                cId: 1,
+                page: 1
+            },
+            success(res) {
+                console.log(23, res)
+                $("#resultTest").html(`页面加载时 获取的数据：${res.list[0].content}`)
+            }
+        })
+    })
+    $("#test").on("click", function () {
+        // console.log(1111)
+        $.ajax({
+            url: "../topic",
+            type: "post",
+            data: {
+                method: "getTopicList",
+                cId: 6,
+                page: 1
+            },
+            success(res) {
+                console.log(23, res)
+                $("#resultTest").html(`用户再次通过ajax 获取的数据：${res.list[0].content}`)
+            }
+        })
+    })
+</script>
+</body>
+</html>
